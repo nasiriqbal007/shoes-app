@@ -1,16 +1,25 @@
-# nike_store
+# Nike Store E-commerce App
 
-A new Flutter project.
+## Overview
+This is a Flutter-based e-commerce application designed for selling sneakers. It features user authentication, product browsing, and a cart system. The app is built with a focus on learning and understanding mobile development with Flutter and Firebase.
+
+## Features
+- User Authentication: Sign up and log in using Firebase Authentication.
+- Product Browsing: View a collection of sneakers with details.
+- Cart Management: Add, remove, and manage items in the cart.
+- Favorites: Save favorite products for later.
+- Responsive Design: Optimized for various screen sizes.
+
+## Tech Stack
+- **Flutter**: For building the cross-platform app.
+- **Firebase**: For authentication, database, and hosting.
+- **GetX**: For state management.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- Flutter SDK
+- Dart
+- Firebase account
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
