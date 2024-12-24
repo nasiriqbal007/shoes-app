@@ -10,6 +10,12 @@ This is a Flutter-based e-commerce application designed for selling sneakers. It
 - Favorites: Save favorite products for later.
 - Responsive Design: Optimized for various screen sizes.
 
+- ## Screens
+- light Theme:
+![shoesapp_white](https://github.com/user-attachments/assets/dfb91d7a-a1e5-4638-9f94-e4a81ead05c9)
+- dark theme:
+- ![shoeapp_black](https://github.com/user-attachments/assets/d1e719c6-2125-4ef5-a81e-7ec1599f9298)
+
 ## Tech Stack
 - **Flutter**: For building the cross-platform app.
 - **Firebase**: For authentication, database, and hosting.
