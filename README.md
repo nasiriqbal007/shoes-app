@@ -1,14 +1,16 @@
-# Nike Store E-commerce App
+# Shoes-E-App
 
 ## Overview
 This is a Flutter-based e-commerce application designed for selling sneakers. It features user authentication, product browsing, and a cart system. The app is built with a focus on learning and understanding mobile development with Flutter and Firebase.
 
 ## Features
-- User Authentication: Sign up and log in using Firebase Authentication.
-- Product Browsing: View a collection of sneakers with details.
-- Cart Management: Add, remove, and manage items in the cart.
-- Favorites: Save favorite products for later.
-- Responsive Design: Optimized for various screen sizes.
+-User Authentication: Easy registration, login, and logout.
+-Product Listing: Browse through a wide range of shoe categories.
+-Product Details: Detailed information about each shoe.
+-Cart Management: Add shoes to your cart and manage quantities.
+-Favorites Management: Save your favorite shoes for later.
+-Theme Switching: Switch between light and dark themes.
+-Intro Page: A welcoming screen for first-time users.
 
 - ## Screens
 - light Theme:
@@ -17,7 +19,7 @@ This is a Flutter-based e-commerce application designed for selling sneakers. It
 - ![shoeapp_black](https://github.com/user-attachments/assets/d1e719c6-2125-4ef5-a81e-7ec1599f9298)
 
 ## Tech Stack
-- **Flutter**: For building the cross-platform app.
+- **Flutter**: For building UI.
 - **Firebase**: For authentication, database, and hosting.
 - **GetX**: For state management.
 
