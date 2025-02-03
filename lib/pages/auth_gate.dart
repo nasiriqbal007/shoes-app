@@ -35,7 +35,9 @@ class AuthGate extends StatelessWidget {
 
               return FutureBuilder<User?>(
                 future: Future.delayed(
-                    Duration.zero, () => authservice.getCurrentUser()),
+                  Duration.zero,
+                  () => authservice.getCurrentUser(),
+                ),
                 builder: (context, authSnapshot) {
                   if (authSnapshot.connectionState == ConnectionState.waiting) {
                     return const Center(child: CircularProgressIndicator());

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';
 import 'package:nike_store/Model/cart_model.dart';
 import 'package:nike_store/Model/shoes_model.dart';
@@ -15,21 +14,22 @@ class ShoeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    VisibilityController visibilityController = Get.put(VisibilityController());
-    final ScrollController scrollController = ScrollController();
+    final VisibilityController visibilityController =
+        Get.put(VisibilityController());
     final CartController cartController = Get.find<CartController>(tag: 'cart');
-    scrollController.addListener(() {
-      visibilityController.setVisibility(
-          scrollController.position.userScrollDirection ==
-              ScrollDirection.forward);
-    });
+    void hideFabOnTouch() {
+      visibilityController.setVisibility(false);
+      Future.delayed(const Duration(seconds: 1), () {
+        visibilityController.setVisibility(true);
+      });
+    }
+
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: _buildAppBar(context),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: CustomScrollView(
-          controller: scrollController,
           shrinkWrap: true,
           physics: const AlwaysScrollableScrollPhysics(),
           slivers: [
@@ -39,7 +39,14 @@ class ShoeDetails extends StatelessWidget {
             SliverToBoxAdapter(child: _buildDivider(context)),
             SliverToBoxAdapter(child: _buildDescriptionTitle(context)),
             const SliverToBoxAdapter(child: SizedBox(height: 8)),
-            SliverToBoxAdapter(child: _buildDescription(context)),
+            SliverToBoxAdapter(
+              child: Listener(
+                onPointerDown: (details) {
+                  hideFabOnTouch();
+                },
+                child: _buildDescription(context),
+              ),
+            ),
           ],
         ),
       ),
